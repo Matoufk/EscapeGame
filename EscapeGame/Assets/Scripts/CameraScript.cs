@@ -46,14 +46,17 @@ public class CameraScript : MonoBehaviour
         // bouton test porte
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
-            if (hit.transform.GetComponent<OpenDoor>().isOpen)
+            if (hit.transform.GetComponent<OpenDoor>() != null)
             {
-                hit.transform.GetComponent<OpenDoor>().closeDoor();
-            } else
-            {
-                hit.transform.GetComponent<OpenDoor>().openDoor();
+                if (hit.transform.GetComponent<OpenDoor>().isOpen)
+                {
+                    hit.transform.GetComponent<OpenDoor>().closeDoor();
+                }
+                else
+                {
+                    hit.transform.GetComponent<OpenDoor>().openDoor();
+                }
             }
-           
 
         }
     }

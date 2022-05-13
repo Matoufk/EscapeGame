@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ColorsAchieved : MonoBehaviour
@@ -16,10 +14,12 @@ public class ColorsAchieved : MonoBehaviour
     public GameObject cubeBleu1;
     public GameObject cubeRouge4;
     public GameObject cubeVert3;
+
+    public OpenDoor porte;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,6 +43,7 @@ public class ColorsAchieved : MonoBehaviour
                  cubeBleu1.transform.GetComponent<coloursCode>().color
                  == "greengreengreenredredredredyellowyellowpurplepurpleblue")
         {
+            porte.openDoor();
             return true;
         }
 
