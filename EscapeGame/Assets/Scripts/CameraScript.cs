@@ -9,14 +9,16 @@ public class CameraScript : MonoBehaviour
     RaycastHit hit;
     GameObject grabOBJ;
     public Transform grabPos;
-     private coloursCode colorCode;
+    private coloursCode colorCode;
     public GameObject epreuve1;
+    public float range = 5;
+    
     void Update()
     {
         Yrot -= Input.GetAxis("Mouse Y");
         Yrot = Mathf.Clamp(Yrot, -80, 80);
         transform.localRotation = Quaternion.Euler(Yrot, 0, 0);
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, 5) && hit.transform.GetComponent<Rigidbody>())
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range) && hit.transform.GetComponent<Rigidbody>())
         {
             grabOBJ = hit.transform.gameObject;
            
@@ -31,7 +33,7 @@ public class CameraScript : MonoBehaviour
         }
 
         // epreuve 1 cubeColors
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, 5) && hit.transform.tag == "colorcube")
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range) && hit.transform.tag == "colorcube")
         {
             hit.transform.GetComponent<coloursCode>().changeColor();
             if (epreuve1.transform.GetComponent<ColorsAchieved>().Gagne() == true) epreuve1.transform.GetComponent<ColorsAchieved>().Open();

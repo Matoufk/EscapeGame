@@ -1989,6 +1989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabPos: {fileID: 213357044}
   epreuve1: {fileID: 1420785282}
+  range: 5
 --- !u!81 &1644179754
 AudioListener:
   m_ObjectHideFlags: 0
