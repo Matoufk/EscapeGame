@@ -13,6 +13,9 @@ public class CameraScript : MonoBehaviour
     public GameObject epreuve1;
     public float range = 5;
     
+    //Bouton Porte
+
+    
     void Update()
     {
         Yrot -= Input.GetAxis("Mouse Y");
@@ -37,6 +40,20 @@ public class CameraScript : MonoBehaviour
         {
             hit.transform.GetComponent<coloursCode>().changeColor();
             if (epreuve1.transform.GetComponent<ColorsAchieved>().Gagne() == true) epreuve1.transform.GetComponent<ColorsAchieved>().Open();
+
+        }
+
+        // bouton test porte
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range))
+        {
+            if (hit.transform.GetComponent<OpenDoor>().isOpen)
+            {
+                hit.transform.GetComponent<OpenDoor>().closeDoor();
+            } else
+            {
+                hit.transform.GetComponent<OpenDoor>().openDoor();
+            }
+           
 
         }
     }
