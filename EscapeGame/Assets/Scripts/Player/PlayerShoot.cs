@@ -8,9 +8,6 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     private LayerMask mask;
 
-    [SerializeField]
-    private string layerLocalPlayerName = "LocalPlayer";
-
     private void Start()
     {
         if( cam == null)
@@ -35,6 +32,8 @@ public class PlayerShoot : MonoBehaviour
         if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit, weapon.range, mask))
         {
             Debug.Log("Object touché : " + hit.collider.name);
+            Cible cibleTarget = hit.collider.GetComponent<Cible>();
+            if(cibleTarget != null)cibleTarget.takeDamage(weapon.damage);
         }
     }
 }
