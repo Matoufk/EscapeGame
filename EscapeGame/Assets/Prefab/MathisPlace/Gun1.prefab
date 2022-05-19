@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 217347195064518060}
   - component: {fileID: 6629174416109671187}
   - component: {fileID: 3726137809967259620}
+  - component: {fileID: 1920934000569542359}
   m_Layer: 8
   m_Name: Gun1
   m_TagString: collectible
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1920934000569542359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682858549224357249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec940eeb4c068b42ab1df3edd244340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGun: 1

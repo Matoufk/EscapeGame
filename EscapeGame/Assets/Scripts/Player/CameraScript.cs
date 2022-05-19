@@ -32,7 +32,11 @@ public class CameraScript : MonoBehaviour
     public GameObject icon5;
 
     public GameObject text_F;
-   
+
+
+    //Test GUN
+    private bool asGun = false;
+    float Xrot;
 
     private void Start()
     {
@@ -62,23 +66,34 @@ public class CameraScript : MonoBehaviour
         Yrot -= Input.GetAxis("Mouse Y");
         Yrot = Mathf.Clamp(Yrot, -80, 80);
         transform.localRotation = Quaternion.Euler(Yrot, 0, 0);
-       /* if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range) && hit.transform.GetComponent<Rigidbody>())
-        {
-            grabOBJ = hit.transform.gameObject;
-           
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            grabOBJ = null;
-        }
-        if (grabOBJ != null)
-        {
-            grabOBJ.GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - grabOBJ.transform.position);
-        }*/
-       for(int i = 0; i < inventaire.Length; i++)
-        {
-            if (inventaire[i]!=null) inventaire[i].GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - inventaire[i].transform.position);
 
+        Xrot -= Input.GetAxis("Mouse X");
+        /* if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range) && hit.transform.GetComponent<Rigidbody>())
+         {
+             grabOBJ = hit.transform.gameObject;
+
+         }
+         else if (Input.GetMouseButtonUp(0))
+         {
+             grabOBJ = null;
+         }
+         if (grabOBJ != null)
+         {
+             grabOBJ.GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - grabOBJ.transform.position);
+         }*/
+        for (int i = 0; i < inventaire.Length; i++)
+        {
+            if (inventaire[i]!=null && !(inventaire[i].GetComponent<IsGun>() != null && inventaire[i].GetComponent<IsGun>().isGun)) inventaire[i].GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - inventaire[i].transform.position);
+            if (inventaire[i] != null && (inventaire[i].GetComponent<IsGun>() != null && inventaire[i].GetComponent<IsGun>().isGun))
+            {
+                Vector3 offSetPos = new Vector3(0.5f, -0.5f, 0f);
+                Vector3 offSetPos2 = new Vector3(-1f, 0f, -1f);
+                float offRot =-90f;
+                inventaire[i].GetComponent<Rigidbody>().detectCollisions = false;
+                // inventaire[i].GetComponent<Rigidbody>().position = this.transform.position+offSetPos;
+                inventaire[i].GetComponent<Rigidbody>().position = this.transform.GetChild(0).position;// + offSetPos2;
+                inventaire[i].GetComponent<Transform>().localRotation = Quaternion.Euler(Yrot+offRot, -Xrot, 0);
+            }
         }
 
         porte();
@@ -86,7 +101,7 @@ public class CameraScript : MonoBehaviour
         collect();
         equip();
         drop();
-        rotate();
+        if(grabOBJ != null && grabOBJ.GetComponent<IsGun>() == null)rotate();
     }
     void porte()
     {
@@ -133,6 +148,14 @@ public class CameraScript : MonoBehaviour
             //hit.transform.gameObject.SetActive(false);
             hit.transform.gameObject.GetComponent<Renderer>().enabled = false;
             hit.transform.gameObject.GetComponent<Collider>().enabled = false;
+
+            //Gestion du gun
+            if (hit.transform.gameObject.GetComponent<IsGun>() != null && hit.transform.gameObject.GetComponent<IsGun>().isGun)
+            {
+                asGun = true;
+            }
+
+
             int i = 1;
             if (nbObj < 5)
             {
