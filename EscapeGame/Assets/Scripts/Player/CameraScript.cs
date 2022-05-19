@@ -91,8 +91,8 @@ public class CameraScript : MonoBehaviour
                 float offRot =-90f;
                 inventaire[i].GetComponent<Rigidbody>().detectCollisions = false;
                 // inventaire[i].GetComponent<Rigidbody>().position = this.transform.position+offSetPos;
-                inventaire[i].GetComponent<Rigidbody>().position = this.transform.GetChild(0).position;// + offSetPos2;
-                inventaire[i].GetComponent<Transform>().localRotation = Quaternion.Euler(Yrot+offRot, -Xrot, 0);
+                inventaire[i].GetComponent<Transform>().position = this.transform.GetChild(0).position;// + offSetPos2;
+               inventaire[i].GetComponent<Transform>().localRotation = Quaternion.Euler(Yrot+offRot, -Xrot, 0);
             }
         }
 
@@ -256,6 +256,11 @@ public class CameraScript : MonoBehaviour
         {
             if (currentObjectEquip != 0)
             {
+                //Si c'est un gun on réactive sont rigid body car je l'avais désac au dessus pour pouvoir le reprendre
+                if (grabOBJ.GetComponent<IsGun>() != null) grabOBJ.transform.GetComponent<Rigidbody>().detectCollisions = true;
+
+
+
                 grabOBJ.transform.GetComponent<Rigidbody>().freezeRotation = false;
                 grabOBJ = null;
                 nbObj--;
