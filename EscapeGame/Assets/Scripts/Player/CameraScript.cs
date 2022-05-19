@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,11 +33,12 @@ public class CameraScript : MonoBehaviour
 
 
     //Test GUN
-    private bool asGun = false;
+    public bool asGun = false;
     float Xrot;
 
     private void Start()
     {
+        asGun = false;
         grabOBJ = null;
         tailleInventaire = 6;
         storage = new Vector3(0, -10, 0);
@@ -86,8 +85,8 @@ public class CameraScript : MonoBehaviour
             if (inventaire[i]!=null && !(inventaire[i].GetComponent<IsGun>() != null && inventaire[i].GetComponent<IsGun>().isGun)) inventaire[i].GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - inventaire[i].transform.position);
             if (inventaire[i] != null && (inventaire[i].GetComponent<IsGun>() != null && inventaire[i].GetComponent<IsGun>().isGun))
             {
-                Vector3 offSetPos = new Vector3(0.5f, -0.5f, 0f);
-                Vector3 offSetPos2 = new Vector3(-1f, 0f, -1f);
+               // Vector3 offSetPos = new Vector3(0.5f, -0.5f, 0f);
+                //Vector3 offSetPos2 = new Vector3(-1f, 0f, -1f);
                 float offRot =-90f;
                 inventaire[i].GetComponent<Rigidbody>().detectCollisions = false;
                 // inventaire[i].GetComponent<Rigidbody>().position = this.transform.position+offSetPos;
@@ -189,6 +188,13 @@ public class CameraScript : MonoBehaviour
                 grabOBJ = inventaire[1];
             grabOBJ.transform.gameObject.GetComponent<Renderer>().enabled = true;//grabOBJ.transform.position = storage;
             grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = true;
+            if (grabOBJ.GetComponent<IsGun>() != null)
+            {
+                asGun = true;
+            } else
+            {
+                asGun = false;
+            }
         }
         if (Input.GetKeyDown("3") && inventaire[2] != null)
         {
@@ -201,6 +207,14 @@ public class CameraScript : MonoBehaviour
             grabOBJ = inventaire[2];
             grabOBJ.transform.gameObject.GetComponent<Renderer>().enabled = true;//grabOBJ.transform.position = storage;
             grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = true;
+            if (grabOBJ.GetComponent<IsGun>() != null)
+            {
+                asGun = true;
+            }
+            else
+            {
+                asGun = false;
+            }
         }
         if (Input.GetKeyDown("4") && inventaire[3] != null)
         {
@@ -213,6 +227,14 @@ public class CameraScript : MonoBehaviour
             grabOBJ = inventaire[3];
             grabOBJ.transform.gameObject.GetComponent<Renderer>().enabled = true;//grabOBJ.transform.position = storage;
             grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = true;
+            if (grabOBJ.GetComponent<IsGun>() != null)
+            {
+                asGun = true;
+            }
+            else
+            {
+                asGun = false;
+            }
         }
         if (Input.GetKeyDown("5") && inventaire[4] != null)
         {
@@ -225,6 +247,14 @@ public class CameraScript : MonoBehaviour
             grabOBJ = inventaire[4];
             grabOBJ.transform.gameObject.GetComponent<Renderer>().enabled = true;//grabOBJ.transform.position = storage;
             grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = true;
+            if (grabOBJ.GetComponent<IsGun>() != null)
+            {
+                asGun = true;
+            }
+            else
+            {
+                asGun = false;
+            }
         }
         if (Input.GetKeyDown("6") && inventaire[5] != null)
         {
@@ -237,6 +267,14 @@ public class CameraScript : MonoBehaviour
             grabOBJ = inventaire[5];
             grabOBJ.transform.gameObject.GetComponent<Renderer>().enabled = true;//grabOBJ.transform.position = storage;
             grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = true;
+            if (grabOBJ.GetComponent<IsGun>() != null)
+            {
+                asGun = true;
+            }
+            else
+            {
+                asGun = false;
+            }
         }
 
         if (currentObjectEquip == 0)
@@ -257,9 +295,11 @@ public class CameraScript : MonoBehaviour
             if (currentObjectEquip != 0)
             {
                 //Si c'est un gun on réactive sont rigid body car je l'avais désac au dessus pour pouvoir le reprendre
-                if (grabOBJ.GetComponent<IsGun>() != null) grabOBJ.transform.GetComponent<Rigidbody>().detectCollisions = true;
-
-
+                if (grabOBJ.GetComponent<IsGun>() != null)
+                {
+                    asGun = false;
+                    grabOBJ.transform.GetComponent<Rigidbody>().detectCollisions = true;
+                }
 
                 grabOBJ.transform.GetComponent<Rigidbody>().freezeRotation = false;
                 grabOBJ = null;

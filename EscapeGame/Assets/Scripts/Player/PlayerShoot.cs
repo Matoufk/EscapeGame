@@ -5,6 +5,10 @@ public class PlayerShoot : MonoBehaviour
     public Camera cam;
     public PlayerWeapon weapon;
 
+    public CameraScript cameraScript;
+    
+    public bool gunEquip = false;
+
     [SerializeField]
     private LayerMask mask;
 
@@ -19,10 +23,12 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        gunEquip = cameraScript.asGun;
+        if (gunEquip && Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
+        
     }
 
     private void Shoot()

@@ -1866,6 +1866,8 @@ MonoBehaviour:
     name: MachineGun
     damage: 50
     range: 100
+  cameraScript: {fileID: 4470458505812539453}
+  gunEquip: 0
   mask:
     serializedVersion: 2
     m_Bits: 183
@@ -2041,8 +2043,7 @@ GameObject:
   - component: {fileID: 8682309004217075968}
   - component: {fileID: 8682309004217075971}
   - component: {fileID: 8682309004217075970}
-  - component: {fileID: 8682309004217075969}
-  - component: {fileID: 8682309004217075996}
+  - component: {fileID: 4470458505812539453}
   m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
@@ -2120,7 +2121,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8682309004217075975}
   m_Enabled: 1
---- !u!114 &8682309004217075969
+--- !u!114 &4470458505812539453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2135,25 +2136,14 @@ MonoBehaviour:
   grabPos: {fileID: 8682309003418860709}
   epreuve1: {fileID: 0}
   range: 5
-  icon0: {fileID: 0}
-  icon1: {fileID: 0}
-  icon2: {fileID: 0}
-  icon3: {fileID: 0}
-  icon4: {fileID: 0}
-  icon5: {fileID: 0}
-  text_F: {fileID: 0}
---- !u!114 &8682309004217075996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8682309004217075975}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b568410b71f171644a83ad2e68249845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  icon0: {fileID: 4379545273743295363}
+  icon1: {fileID: 6054830181302725418}
+  icon2: {fileID: 1673685989947206163}
+  icon3: {fileID: 3847038093546724995}
+  icon4: {fileID: 3062763956929096387}
+  icon5: {fileID: 1876101158095569319}
+  text_F: {fileID: 3957274959163242901}
+  asGun: 0
 --- !u!1 &8682309004444807334
 GameObject:
   m_ObjectHideFlags: 0
