@@ -149,11 +149,11 @@ public class CameraScript : MonoBehaviour
             hit.transform.gameObject.GetComponent<Collider>().enabled = false;
 
             //Gestion du gun
-            if (hit.transform.gameObject.GetComponent<IsGun>() != null && hit.transform.gameObject.GetComponent<IsGun>().isGun)
+            /*if (hit.transform.gameObject.GetComponent<IsGun>() != null && hit.transform.gameObject.GetComponent<IsGun>().isGun)
             {
                 asGun = true;
             }
-
+            */
 
             int i = 1;
             if (nbObj < 5)
@@ -176,6 +176,7 @@ public class CameraScript : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             currentObjectEquip = 0;
+            asGun = false;
         }
         if (Input.GetKeyDown("2") && inventaire[1] != null)
         { 
@@ -285,6 +286,7 @@ public class CameraScript : MonoBehaviour
                 grabOBJ.transform.gameObject.GetComponent<Collider>().enabled = false;
                 grabOBJ = null;
             }
+            asGun = false;
         }
     }
 
