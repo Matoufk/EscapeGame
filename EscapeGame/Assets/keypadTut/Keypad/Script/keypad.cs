@@ -17,7 +17,7 @@ public class keypad : MonoBehaviour
     // Object to be enabled is the keypad. This is needed
     public GameObject objectToEnable;
     public GameObject player;
-     public GameObject camera;
+     public GameObject camera1;
 
 
     // *** Breakdown of header(public) variables *** \\
@@ -83,7 +83,7 @@ public class keypad : MonoBehaviour
             RaycastHit hit;
             float range = 10f;
 
-            if( Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range))
+            if( Physics.Raycast(camera1.transform.position, camera1.transform.forward, out hit, range))
             {
                 var selection = hit.transform;
 
@@ -106,7 +106,7 @@ public class keypad : MonoBehaviour
         {
             objectToEnable.SetActive(true);
             player.GetComponent<CharacterScript>().enabled = false;
-            camera.GetComponent<CameraScript>().enabled = false;
+            camera1.GetComponent<CameraScript>().enabled = false;
             Cursor.lockState = CursorLockMode.None;
         }
 
@@ -124,7 +124,7 @@ public class keypad : MonoBehaviour
                 input = "";
                 displayText.text = input.ToString();
                 player.GetComponent<CharacterScript>().enabled = true;
-                camera.GetComponent<CameraScript>().enabled = true;
+                camera1.GetComponent<CameraScript>().enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 break;
 
