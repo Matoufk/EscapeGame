@@ -22641,6 +22641,7 @@ GameObject:
   - component: {fileID: 6958053033092422768}
   - component: {fileID: 9160912187549672663}
   - component: {fileID: 5712477442831817659}
+  - component: {fileID: 6674376764455169708}
   m_Layer: 7
   m_Name: cible
   m_TagString: Untagged
@@ -22693,6 +22694,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointDeVie: 100
+--- !u!65 &6674376764455169708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160912187549672660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.263329, y: 20.353632, z: 2.6247787}
+  m_Center: {x: -0.020313263, y: 0.019099712, z: 0.017032623}
 --- !u!1 &9169506655795901243
 GameObject:
   m_ObjectHideFlags: 0
