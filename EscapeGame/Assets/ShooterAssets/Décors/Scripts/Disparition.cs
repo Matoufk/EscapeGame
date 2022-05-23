@@ -13,7 +13,7 @@ public class Disparition : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Time.time - curentTime >= coolDown)
+        if (Time.timeSinceLevelLoad - curentTime >= coolDown && !this.gameObject.GetComponent<Cible>().isDestroy)
         {
             activate = !activate;
             disparition(activate);
