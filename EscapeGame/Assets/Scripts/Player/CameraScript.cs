@@ -106,7 +106,8 @@ public class CameraScript : MonoBehaviour
     {
         // bouton test porte
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range))
-        {
+        {   
+            //Si on a une porte
             if (hit.transform.GetComponent<OpenDoor>() != null)
             {
                 if (hit.transform.GetComponent<OpenDoor>().isOpen)
@@ -117,6 +118,11 @@ public class CameraScript : MonoBehaviour
                 {
                     hit.transform.GetComponent<OpenDoor>().openDoor();
                 }
+            }
+            //Si on a un bouton de début d'épreuve
+            if (hit.transform.GetComponent<BoutonStart>() != null)
+            {
+                hit.transform.GetComponent<BoutonStart>().trigger();
             }
         }
     }

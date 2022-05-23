@@ -1,5 +1,4 @@
 ﻿
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -8,17 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class keypad : MonoBehaviour
 {
-    // *** CAN DELETE THESE ** \\
-    // Used to hide joystick and slider
-  //  [Header("Objects to Hide/Show")]
-  //  public GameObject objectToDisable;
-   // public GameObject objectToDisable2;
+   
 
     // Object to be enabled is the keypad. This is needed
     public GameObject objectToEnable;
     public GameObject player;
-     public GameObject camera1;
-
+    public GameObject camera1;
 
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
@@ -27,17 +21,17 @@ public class keypad : MonoBehaviour
     // audioData : Play this sound when user enters in password incorrectly too many times
 
     [Header("Keypad Settings")]
-    public string curPassword = "5364";
+    public string curPassword = "123";
     public string input;
     public Text displayText;
     public AudioSource audioData;
+    public AudioSource gagne;
 
     //Local private variables
     private bool keypadScreen;
     private float btnClicked = 0;
     private float numOfGuesses;
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -57,8 +51,17 @@ public class keypad : MonoBehaviour
     
                 // LOG message that password is correct
                 Debug.Log("Correct Password!");
-                input = ""; //Clear Password
+              
                 btnClicked = 0;
+                objectToEnable.SetActive(false);
+                btnClicked = 0;
+                keypadScreen = false;
+                input = ""; //Clear Password
+                displayText.text = input.ToString();
+                player.GetComponent<CharacterScript>().enabled = true;
+                camera1.GetComponent<CameraScript>().enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                gagne.Play();
 
             }
             else
@@ -71,6 +74,7 @@ public class keypad : MonoBehaviour
             }
 
         }
+
         keypadclick();
 
     }
@@ -83,19 +87,13 @@ public class keypad : MonoBehaviour
             RaycastHit hit;
             float range = 10f;
 
-            if( Physics.Raycast(camera1.transform.position, camera1.transform.forward, out hit, range))
+            if (Physics.Raycast(camera1.transform.position, camera1.transform.forward, out hit, range))
             {
                 var selection = hit.transform;
 
                 if (selection.CompareTag("keypad")) // Tag on the gameobject - Note the gameobject also needs a box collider
                 {
                     keypadScreen = true;
-
-                    var selectionRender = selection.GetComponent<Renderer>();
-                    if (selectionRender != null)
-                    {
-                        keypadScreen = true;
-                    }
                 }
 
             }
@@ -107,6 +105,7 @@ public class keypad : MonoBehaviour
             objectToEnable.SetActive(true);
             player.GetComponent<CharacterScript>().enabled = false;
             camera1.GetComponent<CameraScript>().enabled = false;
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
 

@@ -15,11 +15,12 @@ public class ColorsAchieved : MonoBehaviour
     public GameObject cubeRouge4;
     public GameObject cubeVert3;
 
-    public OpenDoor porte;
+    public GameObject couvercle;
+    private Animator CouvercleAnimator;
     // Start is called before the first frame update
     void Start()
     {
-
+      CouvercleAnimator= couvercle.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class ColorsAchieved : MonoBehaviour
                  cubeBleu1.transform.GetComponent<coloursCode>().color
                  == "greengreengreenredredredredyellowyellowpurplepurpleblue")
         {
-            porte.openDoor();
+            CouvercleAnimator.SetBool("isOpening", true);
             return true;
         }
 

@@ -257,16 +257,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3421678461552716393}
-  m_LocalRotation: {x: -0.70669764, y: -0.0240509, z: 0.0240509, w: 0.70669764}
-  m_LocalPosition: {x: 0, y: 0, z: 3.4920912}
+  m_LocalRotation: {x: -0.5039007, y: -0.49606854, z: 0.49606872, w: 0.5039007}
+  m_LocalPosition: {x: 0, y: 0, z: 3.49}
   m_LocalScale: {x: 0.00088000007, y: 0.65035516, z: 0.87999994}
   m_Children: []
   m_Father: {fileID: 3421678461978110737}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -93.898, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -179.102, y: 90, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6649952, y: 0.49664974}
+  m_AnchoredPosition: {x: -1.14, y: -2.34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &3421678461552716390
@@ -296,7 +296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81c9f9d9dff79514397ac89d421591b7, type: 2}
+  - {fileID: 2100000, guid: 00fecd97ae3bff14bbc9dab04e279545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,8 +329,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.8423617}
+  m_Center: {x: -0.00020271985, y: 0.00000004032954, z: 0.42117995}
 --- !u!54 &3421678461552716389
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -795,7 +795,7 @@ Transform:
   m_GameObject: {fileID: 3421678461978110742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.19, y: 5.871167, z: -6.3540263}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6265, y: 1.6265, z: 1.6265}
   m_Children:
   - {fileID: 3421678461962376892}
   - {fileID: 3421678462240559209}
@@ -813,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3421678462240559209}
   - component: {fileID: 3421678462240559214}
+  - component: {fileID: 682082924}
   m_Layer: 0
   m_Name: Fin de la premiere epreuve
   m_TagString: Untagged
@@ -858,7 +859,21 @@ MonoBehaviour:
   cubeBleu1: {fileID: 3421678462717106462}
   cubeRouge4: {fileID: 3421678461568963621}
   cubeVert3: {fileID: 3421678462935345612}
-  porte: {fileID: 0}
+  chestCouvercle: {fileID: 0}
+--- !u!114 &682082924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421678462240559215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f8a5b53ebe8564fbdfce3240f97dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CouvercleAnimator: {fileID: 0}
+  isOpening: 0
 --- !u!1 &3421678462385571224
 GameObject:
   m_ObjectHideFlags: 0
