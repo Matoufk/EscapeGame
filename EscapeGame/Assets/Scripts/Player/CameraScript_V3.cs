@@ -8,7 +8,6 @@ public class CameraScript_V3 : MonoBehaviour
     RaycastHit hit;
     GameObject grabOBJ;
     public Transform grabPos;
-    private Vector3 grabPos_init;
     private coloursCode colorCode;
     public GameObject epreuve1;
     public float range = 10f;
@@ -375,5 +374,6 @@ public class CameraScript_V3 : MonoBehaviour
             }
         }
     }
+
 
 }
