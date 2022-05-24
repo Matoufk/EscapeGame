@@ -35,6 +35,7 @@ public class CameraScript : MonoBehaviour
     //Test GUN
     public bool asGun = false;
     float Xrot;
+    public WeaponGraphics graphics;
 
     private void Start()
     {
@@ -92,6 +93,7 @@ public class CameraScript : MonoBehaviour
                 // inventaire[i].GetComponent<Rigidbody>().position = this.transform.position+offSetPos;
                 inventaire[i].GetComponent<Transform>().position = this.transform.GetChild(0).position;// + offSetPos2;
                inventaire[i].GetComponent<Transform>().localRotation = Quaternion.Euler(Yrot+offRot, -Xrot, 0);
+                graphics = inventaire[i].GetComponent<WeaponGraphics>();
             }
         }
 
