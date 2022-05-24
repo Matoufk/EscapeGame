@@ -14,6 +14,7 @@ public class disparait : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Renderer>().enabled = collectible.GetComponent<Renderer>().enabled;
+        if (this.GetComponent<Renderer>() != null) this.GetComponent<Renderer>().enabled = collectible.GetComponent<Renderer>().enabled;
+        if (this.GetComponent<Collider>() != null) this.GetComponent<Collider>().enabled = collectible.GetComponent<Collider>().enabled;
     }
 }
