@@ -26,4 +26,12 @@ public class Cible : MonoBehaviour
         }
         isDestroy = true;
     }
+    public void reSpawn()
+    {
+        foreach (Renderer rend in this.gameObject.GetComponentsInChildren<Renderer>())
+        {
+            rend.enabled = true;
+        }
+        isDestroy = false;
+    }
 }

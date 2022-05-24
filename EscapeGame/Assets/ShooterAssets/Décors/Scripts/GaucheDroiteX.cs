@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GaucheDroite : MonoBehaviour
+public class GaucheDroiteX : MonoBehaviour
 {
     //private Transform ascenseur;
     private Vector3 deplacement;

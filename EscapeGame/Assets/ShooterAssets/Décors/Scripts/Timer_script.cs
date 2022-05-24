@@ -4,8 +4,8 @@ using System;
 
 public class Timer_script : MonoBehaviour
 {
-    bool timerActive = true;
-    private float currentTime;
+    public bool timerActive = true;
+    public float currentTime;
     public int startSecondes;
     public TextMesh timeText;
     public bool timerFinit =false;
@@ -15,6 +15,7 @@ public class Timer_script : MonoBehaviour
     {
         //timeText.text = "00:00";
         currentTime = startSecondes;
+        
     }
 
     // Update is called once per frame
@@ -36,5 +37,8 @@ public class Timer_script : MonoBehaviour
 
 
     }
-
+    public void valide()
+    {
+        timeText.color = Color.green;
+    }
 }
