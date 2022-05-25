@@ -13,21 +13,21 @@ public class DisparitionCible : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Time.timeSinceLevelLoad - curentTime >= coolDown)
+        if (Time.timeSinceLevelLoad - curentTime >= coolDown && !this.gameObject.GetComponent<Cible>().isDestroy)
         {
             activate = !activate;
             disparition(activate);
             curentTime = Time.timeSinceLevelLoad;
-            Debug.Log("CoolDown");
+            //Debug.Log("CoolDown");
         }
     }
     void disparition(bool activate)
     {
 
-        foreach(Renderer rend in this.gameObject.GetComponentsInChildren<Renderer>())
+        foreach (Renderer rend in this.gameObject.GetComponentsInChildren<Renderer>())
         {
             rend.enabled = activate;
-        } 
-        this.gameObject.GetComponentInChildren<Collider>().enabled = activate;    
+        }
+        this.gameObject.GetComponentInChildren<Collider>().enabled = activate;
     }
 }
