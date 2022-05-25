@@ -13,11 +13,11 @@ public class Disparition : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Time.time - curentTime >= coolDown)
+        if(Time.timeSinceLevelLoad - curentTime >= coolDown)
         {
             activate = !activate;
             disparition(activate);
-            curentTime = Time.time;
+            curentTime = Time.timeSinceLevelLoad;
             Debug.Log("CoolDown");
         }
     }
