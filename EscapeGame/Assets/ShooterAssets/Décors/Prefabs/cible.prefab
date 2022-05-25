@@ -22694,6 +22694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointDeVie: 100
+  isDestroy: 0
 --- !u!65 &6674376764455169708
 BoxCollider:
   m_ObjectHideFlags: 0
