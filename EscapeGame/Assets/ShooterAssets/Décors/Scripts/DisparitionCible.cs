@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Disparition : MonoBehaviour
+public class DisparitionCible : MonoBehaviour
 {
     public float coolDown = 1.5f;
     public float curentTime;
