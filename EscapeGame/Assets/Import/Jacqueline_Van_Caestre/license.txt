@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jacqueline Van Caestre
+* source:	https://sketchfab.com/3d-models/jacqueline-van-caestre-4df00a98b11f473190dcb242ac2e8bfc
+* author:	Geoffrey Marchal (https://sketchfab.com/geoffreymarchal)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jacqueline Van Caestre" (https://sketchfab.com/3d-models/jacqueline-van-caestre-4df00a98b11f473190dcb242ac2e8bfc) by Geoffrey Marchal (https://sketchfab.com/geoffreymarchal) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

@@ -27,6 +27,10 @@ public class keypad : MonoBehaviour
     public AudioSource audioData;
     public AudioSource gagne;
 
+    //porte
+    public GameObject porte;
+    private Animator PorteAnimator;
+
     //Local private variables
     private bool keypadScreen;
     private float btnClicked = 0;
@@ -37,6 +41,7 @@ public class keypad : MonoBehaviour
     {
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
+        PorteAnimator = porte.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -62,6 +67,7 @@ public class keypad : MonoBehaviour
                 camera1.GetComponent<CameraScript>().enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 gagne.Play();
+                PorteAnimator.SetBool("opening", true);
 
             }
             else
