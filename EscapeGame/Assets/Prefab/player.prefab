@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 5241671100222742490}
   - component: {fileID: 5241671100222742489}
   - component: {fileID: 5241671100222742488}
-  - component: {fileID: 5241671100222742491}
+  - component: {fileID: 8488627535573468449}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -927,7 +927,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5241671100222742485}
   m_Enabled: 1
---- !u!114 &5241671100222742491
+--- !u!114 &8488627535573468449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5241671100222742485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9707824044330a41b339d0e10869f91, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dc532bee7fa3264a962b92358338d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grabPos: {fileID: 5241671101871996678}
@@ -949,6 +949,7 @@ MonoBehaviour:
   icon4: {fileID: 5241671100024204304}
   icon5: {fileID: 5241671100087248520}
   text_F: {fileID: 5241671099999543670}
+  asGun: 0
 --- !u!1 &5241671100325686554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,6 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   smoothSpeed: 5
+  mouseSensitivity: 10
 --- !u!54 &5241671101393915308
 Rigidbody:
   m_ObjectHideFlags: 0
