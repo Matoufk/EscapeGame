@@ -8,6 +8,7 @@ TagManager:
   - collectible
   - Gun
   - WeaponHolder
+  - Cible
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - LocalPlayer
   - Target
   - Gun
-  - 
-  - 
-  - 
+  - Objet
+  - Ascensseur
+  - "Lumi\xE8re"
   - 
   - 
   - 

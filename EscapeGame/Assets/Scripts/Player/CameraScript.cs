@@ -35,6 +35,7 @@ public class CameraScript : MonoBehaviour
     //Test GUN
     public bool asGun = false;
     float Xrot;
+    public WeaponGraphics graphics;
 
     private void Start()
     {
@@ -92,6 +93,7 @@ public class CameraScript : MonoBehaviour
                 // inventaire[i].GetComponent<Rigidbody>().position = this.transform.position+offSetPos;
                 inventaire[i].GetComponent<Transform>().position = this.transform.GetChild(0).position;// + offSetPos2;
                inventaire[i].GetComponent<Transform>().localRotation = Quaternion.Euler(Yrot+offRot, -Xrot, 0);
+                graphics = inventaire[i].GetComponent<WeaponGraphics>();
             }
         }
 
@@ -106,7 +108,8 @@ public class CameraScript : MonoBehaviour
     {
         // bouton test porte
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, out hit, range))
-        {
+        {   
+            //Si on a une porte
             if (hit.transform.GetComponent<OpenDoor>() != null)
             {
                 if (hit.transform.GetComponent<OpenDoor>().isOpen)
@@ -117,6 +120,11 @@ public class CameraScript : MonoBehaviour
                 {
                     hit.transform.GetComponent<OpenDoor>().openDoor();
                 }
+            }
+            //Si on a un bouton de début d'épreuve
+            if (hit.transform.GetComponent<BoutonStart>() != null)
+            {
+                hit.transform.GetComponent<BoutonStart>().trigger();
             }
         }
     }

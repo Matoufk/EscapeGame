@@ -34,6 +34,7 @@ public class PlayerShoot : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
+        this.gameObject.GetComponentInChildren<Camera>().GetComponent<CameraScript>().graphics.muzzleFlash.Play();
 
         if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit, weapon.range, mask))
         {
