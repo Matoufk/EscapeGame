@@ -6,6 +6,7 @@ public class Placing : MonoBehaviour
 {
     private Transform item;
     int currentObjectEquip;
+    Rigidbody m_rb;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,12 @@ public class Placing : MonoBehaviour
         equip();
         stateBox();
         place();
+        
+        if (m_rb != null && this.transform.GetChild(0).GetComponent<Renderer>().enabled == true)
+        {
+            m_rb.constraints = RigidbodyConstraints.None;
+            m_rb = null;
+        }
     }
 
     //place the item in bookshelf
@@ -30,9 +37,11 @@ public class Placing : MonoBehaviour
 
             if(item != null)
             {
-                item.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                //item.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 item.localPosition = this.transform.localPosition;
-                item.localEulerAngles = new Vector3(0f, 0f, 0f);                
+                item.localEulerAngles = new Vector3(0f, 0f, 0f);
+                m_rb = item.GetComponent<Rigidbody>();
+                m_rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             }
         }
     }
@@ -60,7 +69,7 @@ public class Placing : MonoBehaviour
         this.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         if(other.CompareTag("collectible"))
         {
-            item = other.GetComponent<Transform>();
+            item = other.GetComponent<Transform>();            
         }
     }
 
