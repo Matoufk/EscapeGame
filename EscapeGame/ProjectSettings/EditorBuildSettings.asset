@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Yannig_Scene.unity
+    guid: 3b18fecdfac0f5140860bdae0ab555a0
+  - enabled: 1
+    path: Assets/Scenes/Nico_Scene.unity
+    guid: 199670d676f4df44192d43b047192b29
+  - enabled: 1
+    path: "Assets/Scenes/Mathis_Sc\xE8ne.unity"
+    guid: 23aa87c7368f1c44bbfff5ed92c37173
   m_configObjects: {}
