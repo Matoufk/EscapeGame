@@ -15,6 +15,9 @@ public class Aim_epreuve1 : MonoBehaviour
 
     public Animator doorR;
     public Animator doorL;
+
+    public AudioSource win;
+    public AudioSource loose;
     private void Start()
     {
         foreach (Cible cible in this.gameObject.GetComponentsInChildren<Cible>())
@@ -39,6 +42,7 @@ public class Aim_epreuve1 : MonoBehaviour
                     end = true;
                     doorL.SetBool("isOpen", true);
                     doorR.SetBool("isOpen",true);
+                    win.Play();
                     timer.timerActive = false;
                     timer.valide();
                     //this.gameObject.SetActive(false);
@@ -48,6 +52,7 @@ public class Aim_epreuve1 : MonoBehaviour
                 if (timer.timerFinit)
                 {
                     Debug.Log("C'est loose frérot");
+                    loose.Play();
                     start = false;
                     debut(start);
                 }

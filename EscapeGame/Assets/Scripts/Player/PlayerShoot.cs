@@ -9,6 +9,8 @@ public class PlayerShoot : MonoBehaviour
     
     public bool gunEquip = false;
 
+    public AudioSource gunShot;
+
     [SerializeField]
     private LayerMask mask;
 
@@ -40,7 +42,7 @@ public class PlayerShoot : MonoBehaviour
     {
         RaycastHit hit;
         this.gameObject.GetComponentInChildren<Camera>().GetComponent<CameraScript>().graphics.muzzleFlash.Play();
-        
+        gunShot.Play();
 
         if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit, weapon.range, mask))
         {
