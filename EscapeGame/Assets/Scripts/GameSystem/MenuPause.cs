@@ -14,10 +14,12 @@ public class MenuPause : MonoBehaviour
         {
             if (gameIsPause)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 Pause();
             }
         }
@@ -38,7 +40,7 @@ public class MenuPause : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("v0_Scene");
+        SceneManager.LoadScene("Mathis_Scène");
         Time.timeScale = 1f;
     }
 

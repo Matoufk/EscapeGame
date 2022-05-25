@@ -1,0 +1,11 @@
+Model Information:
+* title:	Portal 2 Door
+* source:	https://sketchfab.com/3d-models/portal-2-door-ab36b2a2d73a49bca7c1eb4a0f9ebe88
+* author:	T3 (https://sketchfab.com/t3r3nc3101)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Portal 2 Door" (https://sketchfab.com/3d-models/portal-2-door-ab36b2a2d73a49bca7c1eb4a0f9ebe88) by T3 (https://sketchfab.com/t3r3nc3101) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

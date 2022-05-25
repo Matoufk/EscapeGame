@@ -17,8 +17,8 @@ public class Disparition : MonoBehaviour
         {
             activate = !activate;
             disparition(activate);
-            curentTime = Time.time;
-            Debug.Log("CoolDown");
+            curentTime = Time.timeSinceLevelLoad;
+            //Debug.Log("CoolDown");
         }
     }
     void disparition(bool activate)
