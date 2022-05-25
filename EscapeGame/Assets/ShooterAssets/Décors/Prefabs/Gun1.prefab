@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6629174416109671187}
   - component: {fileID: 3726137809967259620}
   - component: {fileID: 1920934000569542359}
+  - component: {fileID: 7200101901766191977}
   m_Layer: 8
   m_Name: Gun1
   m_TagString: collectible
@@ -159,3 +160,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGun: 1
+--- !u!65 &7200101901766191977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682858549224357249}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06627294, y: 0.8800939, z: 0.39306432}
+  m_Center: {x: 0, y: 0.018739609, z: -0.04113806}
