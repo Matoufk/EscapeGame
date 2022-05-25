@@ -1,0 +1,11 @@
+Model Information:
+* title:	frigo ouverture
+* source:	https://sketchfab.com/3d-models/frigo-ouverture-48b7cf3befd14fc29b7eb13fbb026eb6
+* author:	tmarchand (https://sketchfab.com/tmarchand)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "frigo ouverture" (https://sketchfab.com/3d-models/frigo-ouverture-48b7cf3befd14fc29b7eb13fbb026eb6) by tmarchand (https://sketchfab.com/tmarchand) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

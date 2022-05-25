@@ -1,0 +1,11 @@
+Model Information:
+* title:	Portal Camera
+* source:	https://sketchfab.com/3d-models/portal-camera-55455921d6224c2b8ff0a0334a327b1e
+* author:	Mr. Max (https://sketchfab.com/Mr_MaxTV)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Portal Camera" (https://sketchfab.com/3d-models/portal-camera-55455921d6224c2b8ff0a0334a327b1e) by Mr. Max (https://sketchfab.com/Mr_MaxTV) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

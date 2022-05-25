@@ -1,0 +1,11 @@
+Model Information:
+* title:	Etruscan Amphora
+* source:	https://sketchfab.com/3d-models/etruscan-amphora-a91d4faa44304380b3b512304cba403a
+* author:	Global Digital Heritage (https://sketchfab.com/GlobalDigitalHeritage)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Etruscan Amphora" (https://sketchfab.com/3d-models/etruscan-amphora-a91d4faa44304380b3b512304cba403a) by Global Digital Heritage (https://sketchfab.com/GlobalDigitalHeritage) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

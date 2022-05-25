@@ -1,0 +1,11 @@
+Model Information:
+* title:	Belta 60シェルフ・A OAK
+* source:	https://sketchfab.com/3d-models/belta-60a-oak-71942bb4976e4a3c90c43f89e48a3ee2
+* author:	classe-saga (https://sketchfab.com/classe-saga)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Belta 60シェルフ・A OAK" (https://sketchfab.com/3d-models/belta-60a-oak-71942bb4976e4a3c90c43f89e48a3ee2) by classe-saga (https://sketchfab.com/classe-saga) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

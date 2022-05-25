@@ -1,0 +1,11 @@
+Model Information:
+* title:	Frame 01 C
+* source:	https://sketchfab.com/3d-models/frame-01-c-0f2740ee7ee84436868f8f264f76bba9
+* author:	Misam Ali Rizvi (https://sketchfab.com/MisamAliRizvi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Frame 01 C" (https://sketchfab.com/3d-models/frame-01-c-0f2740ee7ee84436868f8f264f76bba9) by Misam Ali Rizvi (https://sketchfab.com/MisamAliRizvi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

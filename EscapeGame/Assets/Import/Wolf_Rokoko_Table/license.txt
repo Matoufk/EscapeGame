@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wolf Rokoko Table
+* source:	https://sketchfab.com/3d-models/wolf-rokoko-table-64ae928c8889485caa0bce93b6226b04
+* author:	E.Dejnes (https://sketchfab.com/E.Dejnes)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wolf Rokoko Table" (https://sketchfab.com/3d-models/wolf-rokoko-table-64ae928c8889485caa0bce93b6226b04) by E.Dejnes (https://sketchfab.com/E.Dejnes) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
