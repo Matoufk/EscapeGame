@@ -40,7 +40,7 @@ public class MenuPause : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Mathis_Scène");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
 
